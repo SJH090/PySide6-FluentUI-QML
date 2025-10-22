@@ -33,7 +33,7 @@ English | <a href="README_zh_CN.md">简体中文</a>
 [download-latest]: https://img.shields.io/github/downloads/zhuzichu520/PySide6-FluentUI-QML/latest/total.svg "latest status"
 
 ## Requirements
-+ Python 3.11
++ Python 3.x
 
 ## ⚽ Get started
 + run `example` program.
@@ -46,8 +46,18 @@ git clone --recursive https://github.com/zhuzichu520/PySide6-FluentUI-QML.git
 ```bash
 git clone --recursive https://github.com/zhuzichu520/PySide6-FluentUI-QML.git
 cd PySide6-FluentUI-QML
+
+# 安装虚拟环境及相关包
 python ./script-init-venv.py
+
+# 先更新资源文件和翻译文件，然后启动程序
 python ./script-start.py
+
+# 直接启动程序，跳过启动时初始化
+python ./script-start.py fast
+
+# 使用nuitka打包
+（init-venv.py文件中已注释打包工具，不推荐打包）
 python ./script-build-nuitka.py
 ```
 

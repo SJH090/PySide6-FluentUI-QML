@@ -254,7 +254,8 @@ class FluFrameless(QQuickItem, QAbstractNativeEventFilter):
             self.window().setMinimumHeight(self.window().minimumHeight() + appBarHeight)
             self.window().setMaximumHeight(self.window().maximumHeight() + appBarHeight)
         self.window().resize(w, h)
-        self.topmostChanged.connect(self, lambda: self._setWindowTopmost(self._topmost))
+        # self.topmostChanged.connect(self, lambda: self._setWindowTopmost(self._topmost))
+        self.topmostChanged.connect(lambda: self._setWindowTopmost(self._topmost))
         self._setWindowTopmost(self._topmost)
 
     def nativeEventFilter(self, eventType, message):

@@ -86,10 +86,14 @@ class FluTheme(QObject):
         self._watcher = QFileSystemWatcher()
         self._mutex = QMutex()
         self._desktopImagePath = ""
-        self.darkModeChanged.connect(self, lambda: {self.darkChanged.emit()})
-        self.darkChanged.connect(self, lambda: self._refreshColors())
-        self.accentColorChanged.connect(self, lambda: self._refreshColors())
-        self.blurBehindWindowEnabledChanged.connect(self, lambda: self.checkUpdateDesktopImage())
+        # self.darkModeChanged.connect(self, lambda: {self.darkChanged.emit()})
+        self.darkModeChanged.connect(lambda: self.darkChanged.emit())
+        # self.darkChanged.connect(self, lambda: self._refreshColors())
+        self.darkChanged.connect(lambda: self._refreshColors())
+        # self.accentColorChanged.connect(self, lambda: self._refreshColors())
+        self.accentColorChanged.connect(lambda: self._refreshColors())
+        # self.blurBehindWindowEnabledChanged.connect(self, lambda: self.checkUpdateDesktopImage())
+        self.blurBehindWindowEnabledChanged.connect(lambda: self.checkUpdateDesktopImage())
         self.startTimer(1000)
 
     def timerEvent(self, event):
