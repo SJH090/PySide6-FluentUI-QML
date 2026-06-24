@@ -1,4 +1,7 @@
 # ATTENTION!
+
+![:name](https://count.getloli.com/@astrbot_plugin_parser?name=astrbot_plugin_parser&theme=minecraft&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto)
+
 # PLEASE USE THE BRAND NEW [FluentUI Pro](https://github.com/zhuzichu520/FluentUI2) INSTEAD!
 <div align=center>
   <img width=64 src="doc/preview/fluent_design.svg">
